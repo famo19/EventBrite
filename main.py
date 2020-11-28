@@ -4,6 +4,7 @@ from card_logic import  CardLogic
 from login_views import Tabla, Views
 from prettytable import PrettyTable
 
+#NOMBRAR A LA BASE DE DATOS COMO "eventbrite"
 viewObj = Views()
 while True:
     

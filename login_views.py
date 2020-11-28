@@ -10,7 +10,7 @@ eventbrite = EventbriteX()
 user = UserLogic()
 card = CardLogic()
 tarjeta = CardLogic()
-class Tabla:
+class Tabla:#La conexión de la database no actualiza la tabla, no obstante, sí se guardan los cambios en el servidor
 
     def viewAllCards(self, idUser):
         cardList = tarjeta.getAllCards(idUser)
