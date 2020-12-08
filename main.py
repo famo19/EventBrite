@@ -1,30 +1,27 @@
 from eventbrite_x import EventbriteX
 from eventuser_logic import UserLogic
-from card_logic import  CardLogic
+from card_logic import CardLogic
 from login_views import Tabla, Views
 from prettytable import PrettyTable
 
-#NOMBRAR A LA BASE DE DATOS COMO "eventbrite"
 viewObj = Views()
 while True:
-    
-    print("Bienvenido a Eventbrite")
-    opcion = int(input("Inserte '1' para registrarte | '2' para iniciar sesión | '0' para salir del programa "))
 
-    if opcion == 1:#REGISTRO
+    print("\n\t\t\t\t\t¡Bienvenido a Eventbrite!")
+    opcion = int(
+        input(
+            "\n¿Qué deseas hacer?\n\n(1) Registrarme\n(2) Iniciar sesión\n\nTu opción: "
+        )
+    )
+
+    if opcion == 1:  # REGISTRO
         viewObj.Registro()
 
-    elif opcion ==2:#INIICIO DE SESIÓN
+    elif opcion == 2:  # INICIO DE SESIÓN
         viewObj.InicioSesion()
 
-    elif opcion ==0 :
-        print("Pase feliz día")
-        break
-
     else:
-        print("Opción inválida, intente de nuevo")
-
-
-
-
-  
+        print("\n\n¡Oops! Opción inválida, intente de nuevo.\n")
+        print(
+            "-------------------------------------------------------------------------------------------------------------------------------"
+        )

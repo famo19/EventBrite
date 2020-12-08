@@ -1,30 +1,36 @@
-class EventObj:
+class EventoObj:
     def __init__(
         self,
         id,
         idUsuario,
         nombre,
-        idCategoria,
         fecha,
         hora,
         descripcion,
         valorEntrada,
         capacidad,
         disponibilidad,
-        ciudad,
         pais,
+        ciudad,
         direccion,
+        idCategoria,
     ):
         self.id = id
         self.idUsuario = idUsuario
         self.nombre = nombre
-        self.idCategoria = idCategoria
         self.fecha = fecha
         self.hora = hora
         self.descripcion = descripcion
         self.valorEntrada = valorEntrada
         self.capacidad = capacidad
         self.disponibilidad = disponibilidad
-        self.ciudad = ciudad
         self.pais = pais
+        self.ciudad = ciudad
         self.direccion = direccion
+        self.idCategoria = idCategoria
+
+
+class CategoriaObj:
+    def __init__(self, id, nombre_categoria):
+        self.id = id
+        self.nombre_categoria = nombre_categoria

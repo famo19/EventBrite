@@ -22,6 +22,9 @@ class EventbriteX:
 
     # un metodo que nos ayude con las sentencias sql que no regresan informacion
     def executeNonQueryBool(self, sql):
+        # Se refresca la connection para que se actualicen los datos
+        self.endConnection()
+        self.startConnection()
         currentCursor = self.connection.cursor()
         # print(sql)
         currentCursor.execute(sql)
@@ -32,6 +35,9 @@ class EventbriteX:
         return success
 
     def executeNonQueryRows(self, sql):
+        # Se refresca la connection para que se actualicen los datos
+        self.endConnection()
+        self.startConnection()
         currentCursor = self.connection.cursor()
         # print(sql)
         currentCursor.execute(sql)
@@ -40,11 +46,17 @@ class EventbriteX:
 
     # otro metodo que nos ayude con las sentencias sql que si traigan informacion
     def executeQueryRows(self, sql):
+        # Se refresca la connection para que se actualicen los datos
+        self.endConnection()
+        self.startConnection()
         currentCursor = self.connection.cursor()
         currentCursor.execute(sql)
         return currentCursor.fetchall()
 
     def executeQueryOneRow(self, sql):
+        # Se refresca la connection para que se actualicen los datos
+        self.endConnection()
+        self.startConnection()
         currentCursor = self.connection.cursor()
         currentCursor.execute(sql)
         return currentCursor.fetchone()
